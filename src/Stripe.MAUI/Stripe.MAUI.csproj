@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<Target Name="_CleanAarOutputPath" AfterTargets="_CreateAar" BeforeTargets="_IncludeAarInNuGetPackage">
+	  <Delete Files="$(_AarOutputPath)" />
+	</Target>
 
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-android;net8.0-ios;</TargetFrameworks>
@@ -15,6 +18,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<RootNamespace>Stripe</RootNamespace>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
@@ -31,7 +35,7 @@
 		<RepositoryUrl>https://github.com/tuyen-vuduc/dotnet-maui-stripe</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/tuyen-vuduc/dotnet-maui-stripe</PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<PackageVersion>1.2046001.2327041</PackageVersion>
+		<PackageVersion>1.204600.232704</PackageVersion>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>
@@ -45,5 +49,13 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 	</ItemGroup>
+	
+	<ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+		<PackageReference Include="Com.Stripe.StripeAndroid" Version="20.46.0" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.23.3" />
+	</ItemGroup>
 
+	<ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+		<PackageReference Include="StripePaymentSheet.iOS" Version="23.27.4" />
+	</ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Stripe;
 
 namespace StripeMauiQs;
 
@@ -9,6 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseStripe("pk_test_TYooMQauvdEDq54NiTphI7jx")
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

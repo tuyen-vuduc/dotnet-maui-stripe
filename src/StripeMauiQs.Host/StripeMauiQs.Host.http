@@ -1,0 +1,33 @@
+@Host_HostAddress = https://localhost:4243
+@Host_HostAddressx = http://localhost:4242
+
+POST {{Host_HostAddress}}/create-payment-intent
+Accept: application/json
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "X100",
+      "Amount": "500"
+    }
+  ]
+}
+
+###
+
+POST {{Host_HostAddressx}}/create-payment-intent
+Accept: application/json
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "id": "X100",
+      "Amount": "500"
+    }
+  ]
+}
+
+###
+
