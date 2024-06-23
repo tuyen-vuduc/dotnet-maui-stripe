@@ -23,12 +23,21 @@
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to Stripe for .NET MAUI" />
+            
+
+            <Button
+                Text="Fetch payment intent" 
+                SemanticProperties.Hint="Fetch payment intent"
+                Clicked="OnFetchPaymentIntent"
+                Margin="16"
+                HorizontalOptions="Fill" />
 
             <Button
                 x:Name="PayNowButton"
                 Text="Pay now" 
                 SemanticProperties.Hint="Pay with Stripe"
                 Clicked="OnPayNow"
+                IsEnabled="False"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
