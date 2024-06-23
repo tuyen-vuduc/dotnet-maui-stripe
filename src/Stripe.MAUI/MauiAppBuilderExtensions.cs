@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.LifecycleEvents;
+using Stripe.PaymentSheets;
 
 #if __ANDROID__
 using Com.Stripe.Android;
@@ -39,6 +40,8 @@ public static class MauiAppBuilderExtensions
             StripeAPI.DefaultPublishableKey = defaultPublishableKey;
         }
 #endif
+
+        builder.Services.AddSingleton<IPaymentSheet, PaymentSheet>();
 
         return builder;
     }
