@@ -11,25 +11,19 @@
 ## Steps to run the sample app
 
 1/ Open `dotnet-maui-stripe.sln` file
-2/ Replace placeholders with your IDs and secrets
-```cs
-builder
-    ...
-    .UseStripe(
-        androidApiKey: "YOUR_ANDROID_API_KEY",
-        iosApiKey: "YOUR_IOS_API_KEY",
-        crashReportingEnabled: true
-    )
-    ...;
-```
+2/ Create `MauiProgram.dev.cs` as a copy of `MauiProgram.dev.cs.sample`
+3/ Replace the placeholder with your key
+4/ Check out the app
 
 ## Steps to use in your app
 
 1/ Install the nuget package
 ```
-<PackageReference Include="Stripe.MAUI" Version="1.2046001.2327041" />
+<PackageReference Include="Stripe.MAUI" Version="1.204600.232705" />
 ```
 2/ Call `UseStripe` in your `MauiProgram.cs`
+3/ Inject `IPaymentSheet` into your class
+4/ Try to invoke relevant method e.g. `PresentWithPaymentIntentAsync`
 
 ## MAINTAINER
 

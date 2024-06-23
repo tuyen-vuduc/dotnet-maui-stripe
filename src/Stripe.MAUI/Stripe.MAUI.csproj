@@ -42,7 +42,7 @@
 		<RepositoryUrl>https://github.com/tuyen-vuduc/dotnet-maui-stripe</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/tuyen-vuduc/dotnet-maui-stripe</PackageProjectUrl>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<PackageVersion>1.204600.232704</PackageVersion>
+		<PackageVersion>1.204600.232705</PackageVersion>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>icon.png</PackageIcon>

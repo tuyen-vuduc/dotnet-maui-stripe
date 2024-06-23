@@ -3,14 +3,14 @@ using Stripe;
 
 namespace StripeMauiQs;
 
-public static class MauiProgram
+public static partial class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.UseStripe("pk_test_TYooMQauvdEDq54NiTphI7jx")
+			.UseStripe(DEFAULT_PUBLISABLE_KEY)
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
