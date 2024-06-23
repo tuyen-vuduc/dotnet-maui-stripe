@@ -15,7 +15,7 @@
 2/ Create `Shared.dev.cs` as a copy of `Shared.dev.cs.sample`
 
 ```
-|- sr
+|- src
     |- StripeMauiQs.Host
         |- Shared.cs
         |- Shared.dev.cs
