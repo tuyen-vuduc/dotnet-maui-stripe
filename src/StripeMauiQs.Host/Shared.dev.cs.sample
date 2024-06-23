@@ -1,0 +1,8 @@
+﻿namespace QuickStart.Dotnet.Stripe;
+
+partial class ClientHelper
+{
+    public const string API_KEY = "YOUR_API_KEY";
+    public const string DEFAULT_PUBLISHABLE_KEY = "YOUR_DEFAULT_PUBLISHABLE_KEY";
+    public const string BACKEND_URL = "YOUR_BACKEND_URL";
+}

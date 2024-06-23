@@ -1,7 +1,0 @@
-
-namespace StripeMauiQs;
-
-partial class MauiProgram
-{
-    public const string DEFAULT_PUBLISABLE_KEY = "YOUR_DEFAULT_PUBLISABLE_KEY";
-}

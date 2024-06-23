@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.12
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stripe.MAUI", "src\Stripe.MAUI\Stripe.MAUI.csproj", "{F9AE449E-0C96-46FF-8D6A-A36BBFB7BBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stripe.MAUI", "src\Stripe.MAUI\Stripe.MAUI.csproj", "{F9AE449E-0C96-46FF-8D6A-A36BBFB7BBC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StripeMauiQs", "src\StripeMauiQs\StripeMauiQs.csproj", "{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StripeMauiQs", "src\StripeMauiQs\StripeMauiQs.csproj", "{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StripeMauiQs.Host", "src\StripeMauiQs.Host\StripeMauiQs.Host.csproj", "{C4F89CFD-6355-400A-8232-B5FE20CE8099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StripeMauiQs.Host", "src\StripeMauiQs.Host\StripeMauiQs.Host.csproj", "{C4F89CFD-6355-400A-8232-B5FE20CE8099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +21,7 @@ Global
 		{F9AE449E-0C96-46FF-8D6A-A36BBFB7BBC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD72CDD-0B1A-454F-8A0F-64BC3AC87D00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4F89CFD-6355-400A-8232-B5FE20CE8099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

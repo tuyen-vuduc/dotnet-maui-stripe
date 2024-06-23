@@ -11,9 +11,30 @@
 ## Steps to run the sample app
 
 1/ Open `dotnet-maui-stripe.sln` file
-2/ Create `MauiProgram.dev.cs` as a copy of `MauiProgram.dev.cs.sample`
+
+2/ Create `Shared.dev.cs` as a copy of `Shared.dev.cs.sample`
+
+```
+|- sr
+    |- StripeMauiQs.Host
+        |- Shared.cs
+        |- Shared.dev.cs
+
+```
+
 3/ Replace the placeholder with your key
-4/ Check out the app
+
+4/ Run `StripeMauiQs.Host` without debugging
+
+5/ Use [ngrok](https://ngrok.com) to expose your local server for accessing from mobile device(s)/simulator(s)/emulator(s)
+
+```
+ngrok http http://localhost:4242
+```
+
+6/ Set value of `BACKEND_URL` in `Shared.dev.cs` to the generated ngrok URL
+
+7/ Run and check out the app
 
 ## Steps to use in your app
 
@@ -21,8 +42,11 @@
 ```
 <PackageReference Include="Stripe.MAUI" Version="1.204600.232705" />
 ```
+
 2/ Call `UseStripe` in your `MauiProgram.cs`
+
 3/ Inject `IPaymentSheet` into your class
+
 4/ Try to invoke relevant method e.g. `PresentWithPaymentIntentAsync`
 
 ## MAINTAINER

@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+Stripe.StripeConfiguration.ApiKey = QuickStart.Dotnet.Stripe.ClientHelper.API_KEY;
+
 // Add services to the container.
 
 builder.Services.AddControllers();
