@@ -44,7 +44,7 @@ public static class PaymentSheetExtensions
     public static TSPSConfiguration ToPlatform(this Configuration configuration)
     {
         var xconfiguration = new TSPSConfiguration();
-        configuration.MerchantDisplayName = configuration.MerchantDisplayName;
+        xconfiguration.MerchantDisplayName = configuration.MerchantDisplayName;
 
         return xconfiguration;
     }
