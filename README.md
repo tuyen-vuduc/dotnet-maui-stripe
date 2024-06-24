@@ -5,6 +5,7 @@
 ## Prerequisites
 
 - .NET 8
+- Java SDK 17 as the default Java version in your PATH **IMPORTANT**
 - Visual Studio or Visual Studio Code
 - .NET workloads for .NET MAUI
 
@@ -48,6 +49,8 @@ ngrok http http://localhost:4242
 3/ Inject `IPaymentSheet` into your class
 
 4/ Try to invoke relevant method e.g. `PresentWithPaymentIntentAsync`
+
+> **NOTE** **IMPORTANT!!!** If the .NET MAUI project cannot be loaded, please close the solution, then remove bin and obj folders patiently.
 
 ## MAINTAINER
 
