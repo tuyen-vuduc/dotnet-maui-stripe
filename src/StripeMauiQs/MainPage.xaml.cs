@@ -6,13 +6,11 @@ namespace StripeMauiQs;
 
 public partial class MainPage : ContentPage
 {
-    private readonly IPaymentSheet paymentSheet;
     private string paymentIntentClientSecret;
 
-    public MainPage(IPaymentSheet paymentSheet)
+    public MainPage()
 	{
 		InitializeComponent();
-        this.paymentSheet = paymentSheet;
     }
 
     private async void OnFetchPaymentIntent(object sender, EventArgs e)
@@ -38,6 +36,7 @@ public partial class MainPage : ContentPage
 	{
         var configuration = new Configuration("TuyenTV.dev Co.Ltd.");
 
+        var paymentSheet = Handler.MauiContext.Services.GetService<IPaymentSheet>();
         var (result, msg) = await paymentSheet.PresentWithPaymentIntentAsync(paymentIntentClientSecret, configuration)
             .ContinueWith(t =>
             {

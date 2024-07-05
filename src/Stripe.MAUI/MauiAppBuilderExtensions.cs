@@ -30,6 +30,14 @@ public static class MauiAppBuilderExtensions
                             defaultPublishableKey
                         );
                     });
+                    alc.OnCreate((_, __) =>
+                    {
+                        // Fake initialize an instance of IPaymentSheet
+                        // Because it must be created at the time of activity created only.
+                        var ___ = Application.Current
+                            .Handler.MauiContext
+                            .Services.GetService<IPaymentSheet>();
+                    });
                 });
             });
         }
@@ -40,7 +48,6 @@ public static class MauiAppBuilderExtensions
             StripeAPI.DefaultPublishableKey = defaultPublishableKey;
         }
 #endif
-
         builder.Services.AddSingleton<IPaymentSheet, PaymentSheet>();
 
         return builder;

@@ -41,7 +41,7 @@ ngrok http http://localhost:4242
 
 1/ Install the nuget package
 ```
-<PackageReference Include="Stripe.MAUI" Version="1.204600.232705" />
+<PackageReference Include="Stripe.MAUI" Version="1.204600.232705.1" />
 ```
 
 2/ Call `UseStripe` in your `MauiProgram.cs`
