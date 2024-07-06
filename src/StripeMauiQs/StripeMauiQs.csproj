@@ -77,7 +77,7 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
-		<PackageReference Include="TVStripePaymentSheet.iOS" Version="23.27.5" />
+		<PackageReference Include="TVStripePaymentSheet.iOS" Version="23.27.6" />
 
 		<Compile Include="..\Stripe.MAUI\Platforms\iOS\**\*.cs">
 			<Link>Platforms\iOS\%(RecursiveDir)%(Filename)%(Extension)</Link>

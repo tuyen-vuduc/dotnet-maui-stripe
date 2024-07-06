@@ -32,8 +32,7 @@ public static class MauiAppBuilderExtensions
                     });
                     alc.OnCreate((_, __) =>
                     {
-                        // Fake initialize an instance of IPaymentSheet
-                        // Because it must be created at the time of activity created only.
+                        // An instance of IPaymentSheet must be created at the time of activity created.
                         var ___ = Application.Current
                             .Handler.MauiContext
                             .Services.GetService<IPaymentSheet>();
